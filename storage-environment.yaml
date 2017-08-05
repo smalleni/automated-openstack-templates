@@ -89,14 +89,17 @@ parameter_defaults:
         journal: '/dev/nvme0n1'
       '/dev/sdq':
         journal: '/dev/nvme0n1'
+
   R630CephStorageExtraConfig:
     ceph::profile::params::osds:
       '/dev/sda':
         journal: {}
+
   R620CephStorageExtraConfig:
     ceph::profile::params::osds:
       '/dev/sda':
         journal: {}
+
   R6048CephStorageExtraConfig:
     ceph::profile::params::osds:
        '/dev/sda':
