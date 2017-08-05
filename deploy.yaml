@@ -1,0 +1,39 @@
+parameter_defaults:
+  # Number of nodes of each role
+  ControllerCount: {{ controller_count }}
+  R930ComputeCount: {{ r930compute_count }}
+  R730ComputeCount: {{ r730compute_count }}
+  R630ComputeCount: {{ r630compute_count }}
+  R620ComputeCount: {{ r620compute_count }}
+  R6048ComputeCount: {{ 6048rcompute_count }}
+  R6018ComputeCount: {{ 6018rcompute_count }}
+  R930CephStorageCount: {{ r930ceph_count }}
+  R730CephStorageCount: {{ r730ceph_count }}
+  R630CephStorageCount: {{ r630ceph_count }}
+  R620CephStorageCount: {{ r620ceph_count }}
+  R6048CephStorageCount: {{ 6048rceph_count }}
+  R6018CephStorageCount: {{ 6018rceph_count }}
+  ObjectStorageCount: 0
+
+
+  # Flavor for profile matching
+  OvercloudControlFlavor: control
+  OvercloudR930ComputeFlavor: r930compute
+  OvercloudR730ComputeFlavor: r730compute
+  OvercloudR630ComputeFlavor: r630compute
+  OvercloudR620ComputeFlavor: r620compute
+  OvercloudR6048ComputeFlavor: 6048rcompute
+  OvercloudR6018ComputeFlavor: 6018rcompute
+  OvercloudR930CephStorageFlavor: r930ceph
+  OvercloudR730CephStorageFlavor: r730ceph
+  OvercloudR630CephStorageFlavor: r630ceph
+  OvercloudR620CephStorageFlavor: r620ceph
+  OvercloudR6048CephStorageFlavor: 6048rceph
+  OvercloudR6018CephStorageFlavor: 6048rceph
+  OvercloudSwiftStorageFlavor: swift-storage
+
+
+
+
+  
+
