@@ -78,7 +78,7 @@ resource_registry:
  
 parameter_defaults:
   NeutronExternalNetworkBridge: "''"
-  NeutronBridgeMappings: "datacentre:br-external"
+  #NeutronBridgeMappings: "datacentre:br-external"
   InternalApiNetCidr: 192.168.25.0/24
   TenantNetCidr: 192.168.26.0/24
   StorageNetCidr: 192.168.27.0/24
