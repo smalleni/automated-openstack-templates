@@ -1,6 +1,6 @@
 resource_registry:
   #OS::TripleO::BlockStorage::Net::SoftwareConfig: /home/stack/templates/nic-configs/cinder-storage.yaml
-  OS::TripleO::Controller::Net::SoftwareConfig: nic-configs/{{ }}
+  OS::TripleO::Controller::Net::SoftwareConfig: nic-configs/{{ type }}-controller.yaml
   #OS::TripleO::ObjectStorage::Net::SoftwareConfig: /home/stack/templates/nic-configs/swift-storage.yaml
   OS::TripleO::R930Compute::Net::SoftwareConfig: nic-configs/r930-compute.yaml
   OS::TripleO::R730Compute::Net::SoftwareConfig: nic-configs/r730-compute.yaml
