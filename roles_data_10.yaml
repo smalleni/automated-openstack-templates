@@ -33,29 +33,23 @@
   CountDefault: 1
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    - OS::TripleO::Services::CephMds
     - OS::TripleO::Services::CephMon
     - OS::TripleO::Services::CephExternal
-    - OS::TripleO::Services::CephRbdMirror
     - OS::TripleO::Services::CephRgw
     - OS::TripleO::Services::CinderApi
     - OS::TripleO::Services::CinderBackup
     - OS::TripleO::Services::CinderScheduler
     - OS::TripleO::Services::CinderVolume
-    - OS::TripleO::Services::CinderBackendDellPs
-    - OS::TripleO::Services::CinderBackendDellSc
-    - OS::TripleO::Services::CinderBackendNetApp
-    - OS::TripleO::Services::CinderBackendScaleIO
-    - OS::TripleO::Services::Congress
+    - OS::TripleO::Services::Core
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Keystone
     - OS::TripleO::Services::GlanceApi
+    - OS::TripleO::Services::GlanceRegistry
     - OS::TripleO::Services::HeatApi
     - OS::TripleO::Services::HeatApiCfn
     - OS::TripleO::Services::HeatApiCloudwatch
     - OS::TripleO::Services::HeatEngine
     - OS::TripleO::Services::MySQL
-    - OS::TripleO::Services::MySQLClient
     - OS::TripleO::Services::NeutronDhcpAgent
     - OS::TripleO::Services::NeutronL3Agent
     - OS::TripleO::Services::NeutronMetadataAgent
@@ -71,18 +65,15 @@
     - OS::TripleO::Services::NovaConductor
     - OS::TripleO::Services::MongoDb
     - OS::TripleO::Services::NovaApi
-    - OS::TripleO::Services::NovaPlacement
     - OS::TripleO::Services::NovaMetadata
     - OS::TripleO::Services::NovaScheduler
     - OS::TripleO::Services::NovaConsoleauth
     - OS::TripleO::Services::NovaVncProxy
-    - OS::TripleO::Services::Ec2Api
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::SwiftProxy
     - OS::TripleO::Services::SwiftStorage
     - OS::TripleO::Services::SwiftRingBuilder
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
       #- OS::TripleO::Services::CeilometerApi
       #- OS::TripleO::Services::CeilometerCollector
@@ -114,21 +105,7 @@
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::Collectd
-    - OS::TripleO::Services::BarbicanApi
-    - OS::TripleO::Services::PankoApi
-    - OS::TripleO::Services::Tacker
-    - OS::TripleO::Services::Zaqar
-    - OS::TripleO::Services::OVNDBs
-    - OS::TripleO::Services::NeutronML2FujitsuCfab
-    - OS::TripleO::Services::NeutronML2FujitsuFossw
-    - OS::TripleO::Services::CinderHPELeftHandISCSI
-    - OS::TripleO::Services::Etcd
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::OctaviaApi
-    - OS::TripleO::Services::OctaviaHealthManager
-    - OS::TripleO::Services::OctaviaHousekeeping
-    - OS::TripleO::Services::OctaviaWorker
+    - OS::TripleO::Services::VipHosts
 
 - name: R930Compute
   CountDefault: 1
@@ -140,7 +117,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -155,9 +131,7 @@
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
-
+    - OS::TripleO::Services::VipHosts
 
 - name: R730Compute
   CountDefault: 1
@@ -169,7 +143,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -184,8 +157,7 @@
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R630Compute
   CountDefault: 1
@@ -197,7 +169,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -212,8 +183,7 @@
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R620Compute
   CountDefault: 1
@@ -225,7 +195,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -233,16 +202,15 @@
     - OS::TripleO::Services::ComputeNeutronOvsAgent
       #- OS::TripleO::Services::ComputeCeilometerAgent
     - OS::TripleO::Services::ComputeNeutronL3Agent
-    - OS::TripleO::Services::ComputeNeutronMetadataAgent
+    - OS::TripleO::Services::ComputeNeutronMetadataAgent 
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::NeutronSriovAgent
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
-
+    - OS::TripleO::Services::VipHosts
+ 
 - name: R6048Compute
   CountDefault: 1
   disable_upgrade_deployment: True
@@ -253,7 +221,6 @@
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -261,27 +228,25 @@
     - OS::TripleO::Services::ComputeNeutronOvsAgent
       #- OS::TripleO::Services::ComputeCeilometerAgent
     - OS::TripleO::Services::ComputeNeutronL3Agent
-    - OS::TripleO::Services::ComputeNeutronMetadataAgent
+    - OS::TripleO::Services::ComputeNeutronMetadataAgent 
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::NeutronSriovAgent
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R6018Compute
   CountDefault: 1
   disable_upgrade_deployment: True
-  ServicesDefault:
+  ServicesDefault:    
     - OS::TripleO::Services::CACerts
     - OS::TripleO::Services::CephClient
     - OS::TripleO::Services::CephExternal
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::NovaCompute
     - OS::TripleO::Services::NovaLibvirt
     - OS::TripleO::Services::Kernel
@@ -289,18 +254,16 @@
     - OS::TripleO::Services::ComputeNeutronOvsAgent
       #- OS::TripleO::Services::ComputeCeilometerAgent
     - OS::TripleO::Services::ComputeNeutronL3Agent
-    - OS::TripleO::Services::ComputeNeutronMetadataAgent
+    - OS::TripleO::Services::ComputeNeutronMetadataAgent 
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::NeutronSriovAgent
     - OS::TripleO::Services::OpenDaylightOvs
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
-
-- name: BlockStorage
+ name: BlockStorage
   ServicesDefault:
     - OS::TripleO::Services::CACerts
     - OS::TripleO::Services::BlockStorageCinderVolume
@@ -308,13 +271,11 @@
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: ObjectStorage
   disable_upgrade_deployment: True
@@ -325,14 +286,12 @@
     - OS::TripleO::Services::SwiftStorage
     - OS::TripleO::Services::SwiftRingBuilder
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R930CephStorage
   CountDefault: 0
@@ -343,14 +302,12 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R730CephStorage
   CountDefault: 0
@@ -361,14 +318,12 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R630CephStorage
   CountDefault: 0
@@ -379,14 +334,12 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R620CephStorage
   CountDefault: 0
@@ -397,15 +350,12 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
-
+    - OS::TripleO::Services::VipHosts
 
 - name: R6048CephStorage
   CountDefault: 0
@@ -416,14 +366,12 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
 - name: R6018CephStorage
   CountDefault: 0
@@ -434,12 +382,10 @@
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Snmp
-    - OS::TripleO::Services::Sshd
     - OS::TripleO::Services::Timezone
     - OS::TripleO::Services::TripleoPackages
     - OS::TripleO::Services::TripleoFirewall
     - OS::TripleO::Services::SensuClient
     - OS::TripleO::Services::FluentdClient
-    - OS::TripleO::Services::AuditD
-    - OS::TripleO::Services::Collectd
+    - OS::TripleO::Services::VipHosts
 
